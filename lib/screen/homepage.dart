@@ -101,9 +101,11 @@ class _HomePageState extends State<HomePage> {
           CarouselAcceuil(products: items),
           const SizedBox(height: 32),
 
-          const Text(
-            'Commandes Regulieres',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          Center(
+            child: const Text(
+              'Commandes Regulieres',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
           ),
           const SizedBox(height: 16),
 
