@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:labouffe/screen/homepage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      const MyApp()
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -18,6 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner : false,
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
       home: HomePage(
         isDarkMode: isDarkMode,
