@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'appbartool.dart';
 import 'bottomBarTool.dart';
 
+
 class HomePage extends StatefulWidget {
   final bool isDarkMode;
   final VoidCallback onThemeToggle;
@@ -55,12 +56,19 @@ class _HomePageState extends State<HomePage> {
       const SizedBox(height: 16),
           // barre de recherche
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Recherche',
-                prefixIcon: const Icon(Icons.search),
-                border: InputBorder.none,
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Recherche',
+                  prefixIcon: const Icon(Icons.search),
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.symmetric(vertical: 12.0),
+                ),
               ),
             ),
           ),
@@ -87,10 +95,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           const SizedBox(height: 16),
-
-
-
-
 
         ]),
       bottomNavigationBar: BottomBarTool(
