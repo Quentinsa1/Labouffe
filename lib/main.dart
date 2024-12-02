@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:labouffe/screen/homepage.dart';
+import 'package:labouffe/screen/splashScreen.dart';
 
 void main() {
   runApp(
-      const MyApp()
+      const SplashScreen()
   );
 }
 
