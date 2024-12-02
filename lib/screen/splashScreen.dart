@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:labouffe/screen/panier.dart';
 import 'homepage.dart';
-import 'dart:ui' as ui;
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = false;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
@@ -34,13 +34,14 @@ class SplashScreen extends StatelessWidget {
                   ),
 
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 70),
              ElevatedButton(
                onPressed: () {
-                 // Navigator.pushReplacement(
-                 //   context,
-                 //   MaterialPageRoute(builder: (context) => const CartPage()),
-                 // );
+                  Navigator.pushReplacement(
+                    context,
+                     MaterialPageRoute(builder: (context) => HomePage(isDarkMode: false,onThemeToggle: () { setState(() {  isDarkMode = !isDarkMode;});},
+                    )),
+                  );
                },
                style: ElevatedButton.styleFrom(
                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
@@ -84,4 +85,6 @@ class SplashScreen extends StatelessWidget {
       ),
     );
   }
+
+  setState(Null Function() param0) {}
 }
