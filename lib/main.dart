@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:labouffe/screen/homepage.dart';
-import 'package:labouffe/screen/splashScreen.dart';
+import 'package:labouffe/screen/panier.dart';
+import '';
 
 void main() {
   runApp(
-      const SplashScreen()
+      MaterialApp(
+          debugShowCheckedModeBanner : false,
+          home: const CartPage()
+      )
   );
 }
 
@@ -22,7 +26,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner : false,
-      theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
+      //theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
+      theme: ThemeData.light(),  // Le thème clair
+      darkTheme: ThemeData.dark(), // Le thème sombre
+      themeMode: ThemeMode.system,
       home: HomePage(
         isDarkMode: isDarkMode,
         onThemeToggle: () {
